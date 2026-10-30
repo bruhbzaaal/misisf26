@@ -1,0 +1,9 @@
+﻿OrderIdsMindboxId;OrderFirstActionDateTimeUtc;OrderFirstActionChannelName;OrderCustomerIdsMindboxId;OrderLineQuantity;OrderLinePriceOfLine;OrderLineStatusIdsExternalId;OrderLineCustomFieldsConsultantPerItem
+001;2026-10-08 21:00:00;Авиапарк;001;2;100,50;done;Demo advisor
+001;2026-10-08 21:00:00;Авиапарк;001;1;50;done;Demo assistant
+002;2026-10-10 10:00:00;ГУМ;001;1;200;done;Demo advisor
+003;2026-10-09 08:00:00;Авиапарк;002;1;300;done;Demo advisor
+004;2026-10-09 08:00:00;Авиапарк;003;1;400;returned;Demo advisor
+005;2026-10-09 08:00:00;Авиапарк;missing;1;25;done;Demo advisor
+006;2026-10-09 08:00:00;Авиапарк;;1;999;done;Demo advisor
+007;2026-10-10 21:00:00;Авиапарк;001;1;10;done;Demo advisor

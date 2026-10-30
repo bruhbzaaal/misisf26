@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="report-token" content="__TOKEN__"><title>Emiliano Zapata · Reports</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><main>
+<header><div class="brand">EMILIANO ZAPATA <span>REPORTS</span></div><label class="language">Language / Язык<select id="language"><option value="ru">Русский</option><option value="en">English</option></select></label></header>
+<section class="intro"><span class="eyebrow" data-t="workspace">РАБОЧЕЕ ПРОСТРАНСТВО</span><h1 data-t="title">От выгрузки к отчёту</h1><p data-t="subtitle">Продажи, регистрации и заполненность карточек — в одном месте.</p><p class="local" data-t="local">Данные обрабатываются Python на вашем компьютере.</p></section>
+<section class="card"><div class="section-heading"><h2 data-t="source">01 · Исходные данные</h2><button class="quiet" id="demo" data-t="demo">Попробовать на демоданных</button></div>
+<div class="uploads"><label><b data-t="orders">Заказы</b><small data-t="ordersHelp">CSV с позициями заказов</small><input type="file" accept=".csv" id="orders"></label><label><b data-t="customers">Клиенты</b><small data-t="customersHelp">CSV с полями и сотрудником регистрации</small><input type="file" accept=".csv" id="customers"></label><label><b data-t="registrations">Регистрации</b><small data-t="registrationsHelp">CSV с событиями регистрации</small><input type="file" accept=".csv" id="registrations"></label></div>
+<div class="load-row"><button id="load" data-t="load">Загрузить файлы</button><small data-t="formats">UTF-8 или Windows-1251 · разделитель ; , или табуляция</small></div><p id="loadStatus" role="status"></p>
+<details id="mappingPanel" hidden><summary data-t="mapping">Поля карточки клиента</summary><p data-t="mappingHelp">Проверьте соответствие колонок. Отсутствие колонки означает «Нет данных».</p><div class="mapping" id="mapping"></div></details>
+</section>
+<section class="card"><h2 data-t="period">02 · Период отчёта</h2><div class="controls"><label><span data-t="from">Начало периода</span><input id="from" type="date" required></label><label><span data-t="to">Конец периода</span><input id="to" type="date" required></label><button id="build" data-t="build" disabled>Построить отчёты</button></div><p class="hint" data-t="periodHelp">Обе даты включительно, московское время. Начальный период — пересечение дат в файлах; полноту выгрузок он не подтверждает.</p></section>
+<div id="error" role="alert" hidden></div><p id="busy" role="status" hidden></p>
+<section id="result" hidden><div class="result-heading"><div><span class="eyebrow" data-t="ready">ОТЧЁТ ГОТОВ</span><h2 id="resultPeriod"></h2></div><div class="actions"><button id="excel" data-t="excel">Скачать Excel</button><button class="quiet" id="csv" data-t="csv">Скачать CSV</button></div></div><p class="hint" data-t="excelHelp">В Excel сохраняются исходные данные, фильтры и формулы для смены периода. Язык файла соответствует выбранному языку.</p>
+<nav aria-label="Reports"><button id="salesTab" class="tab active" data-t="sales">Продажи</button><button id="regsTab" class="tab" data-t="regs">Регистрации</button><label class="filter"><span data-t="boutique">Бутик</span><select id="boutique"></select></label></nav><div id="tables"></div>
+<details class="card"><summary data-t="notes">Правила и качество исходных данных</summary><div id="notes"></div></details></section>
+<footer data-t="footer">Локальное приложение · Для завершения закройте окно запуска или нажмите Ctrl+C в нём.</footer>
+</main></body></html>
